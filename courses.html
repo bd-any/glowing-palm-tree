@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>YuksalishLC Courses Catalog</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0A2837",
+            "primary-hover": "#083042",
+            "accent": "#1AA6A6",
+            "background-main": "#FFFFFF",
+            "background-alt": "#F5F7FA",
+            "text-heading": "#0A2837",
+            "text-body": "#22323B",
+            "text-muted": "#64748B",
+            "border-light": "#E2E8F0"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F5F7FA;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0A2837;
+    }
+  </style>
+</head>
+
+<body class="bg-background-main font-display text-text-body min-h-screen flex flex-col">
+  <header
+    class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-border-light bg-background-main/95 backdrop-blur-md px-10 py-3 shadow-sm">
+    <div class="flex items-center gap-8">
+      <div class="flex items-center gap-2 text-text-heading">
+        <div class="size-8 text-primary">
+          <svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+              fill="currentColor"></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">YuksalishLC</h2>
+      </div>
+      <nav class="hidden md:flex items-center gap-9">
+        <a class="text-text-muted hover:text-accent text-sm font-medium leading-normal transition-colors"
+          href="#">Home</a>
+        <a class="text-accent text-sm font-bold leading-normal relative border-b-2 border-accent pb-1"
+          href="#">Courses</a>
+        <a class="text-text-muted hover:text-accent text-sm font-medium leading-normal transition-colors" href="#">About
+          Us</a>
+        <a class="text-text-muted hover:text-accent text-sm font-medium leading-normal transition-colors"
+          href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="flex flex-1 justify-end gap-6 items-center">
+      <label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+        <div
+          class="flex w-full flex-1 items-stretch rounded-lg h-full border border-border-light bg-background-alt overflow-hidden focus-within:ring-2 focus-within:ring-accent/50 focus-within:border-accent transition-all">
+          <div class="text-text-muted flex items-center justify-center pl-3">
+            <span class="material-symbols-outlined text-[20px]">search</span>
+          </div>
+          <input
+            class="form-input w-full min-w-0 flex-1 resize-none border-none bg-transparent text-text-body focus:outline-0 focus:ring-0 placeholder:text-text-muted px-3 text-sm font-normal leading-normal"
+            placeholder="Search courses..." value="" />
+        </div>
+      </label>
+      <button
+        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary-hover text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors shadow-md shadow-primary/10">
+        <span class="truncate">Log In</span>
+      </button>
+    </div>
+  </header>
+  <main class="flex-grow">
+    <div class="layout-container flex flex-col items-center">
+      <div class="layout-content-container flex flex-col max-w-[1200px] w-full px-6 py-10 gap-10">
+        <div class="flex flex-col md:flex-row justify-between gap-6 items-start md:items-end">
+          <div class="flex flex-col gap-3 max-w-2xl">
+            <h1 class="text-text-heading text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+              Explore Our <span class="text-accent">Educational Programs</span>
+            </h1>
+            <p class="text-text-body text-lg font-normal leading-relaxed">
+              Find the perfect course to upgrade your skills in IT, master new languages, or develop cognitive
+              abilities.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white px-6 shadow-md shadow-primary/10 transition-transform active:scale-95">
+            <p class="text-sm font-bold leading-normal">All</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-alt hover:bg-border-light px-6 border border-border-light transition-colors">
+            <p class="text-text-body text-sm font-medium leading-normal">IT</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-alt hover:bg-border-light px-6 border border-border-light transition-colors">
+            <p class="text-text-body text-sm font-medium leading-normal">English</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-alt hover:bg-border-light px-6 border border-border-light transition-colors">
+            <p class="text-text-body text-sm font-medium leading-normal">German</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-alt hover:bg-border-light px-6 border border-border-light transition-colors">
+            <p class="text-text-body text-sm font-medium leading-normal">Mental Arithmetic</p>
+          </button>
+        </div>
+        <section>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="material-symbols-outlined text-accent text-3xl">terminal</span>
+            <h2 class="text-text-heading text-2xl font-bold leading-tight">IT Courses</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="flex flex-col rounded-xl bg-white overflow-hidden shadow-sm border border-border-light hover:border-[rgba(26,166,166,0.35)] hover:shadow-md transition-all duration-300 group">
+              <div class="h-48 w-full bg-cover bg-center relative" data-alt="Code on computer screen with neon lights"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBibdc94Z1zFmns2bQC3BoScdSJ5aQQe5p-3p9k8Uyy-70d9iMB6GMJC6gqqYQsODdWKBvkpjW3s__AmvWa-bm5FuU_IopT9lcI4EVJyLiDuWZ6QWmr8NvMegQZA-ZP1ZZT6Wp0w9PCGFcgt-3v3V4zT8cPr8LxEwiYpRmk7RZN4ZKcCSDvEy7XkA2IxlcLNuuex5cK8F4IRHOSTJ7XceKyXb6pLzMgWmemWDcXd2c-jfgUnTxnyAYXXjbd8VSJ2CKAT-pSJ3upeKGI');">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <span
+                    class="bg-accent text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block shadow-sm">Popular</span>
+                  <h3 class="text-white text-xl font-bold">Frontend Development</h3>
+                </div>
+              </div>
+              <div class="p-5 flex flex-col gap-4 flex-1">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-2 text-text-muted text-sm">
+                    <span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+                    <span>Beginner to Advanced</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-text-muted text-sm">
+                    <span class="material-symbols-outlined text-[18px]">schedule</span>
+                    <span>6 Months</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-4 border-t border-border-light flex gap-3">
+                  <button
+                    class="flex-1 h-9 rounded-lg bg-background-alt text-text-body hover:bg-primary hover:text-white text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">download</span>
+                    Syllabus
+                  </button>
+                  <button
+                    class="h-9 w-9 rounded-lg border border-border-light flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col rounded-xl bg-white overflow-hidden shadow-sm border border-border-light hover:border-[rgba(26,166,166,0.35)] hover:shadow-md transition-all duration-300 group">
+              <div class="h-48 w-full bg-cover bg-center relative"
+                data-alt="Backend server code structure visualization"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUcaOJJZVf2iLcfqVtNaQxcl2OIWY7pK2OKs_xgjvQyttJ-AwL-b00syEHSQMVTCBOIpFLMEDV9EyzX4ryV-5R7K8eeE6tVJrdESJswYUpU4obf7G55lKL6StvBNTGBA3Al_Icw5fOLfyayFoZhIsLUeyQgQ10KK159IE-w6U7nqAPi9S3OPLKg70wrKm5So1I15NTax0BvgYxWuTE6T9tlBAthu7l49iKK3uVTHwNrG9KRrMKyuvrT1OVyhghox79iR_UzVDOzWhn');">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <h3 class="text-white text-xl font-bold">Backend Development</h3>
+                </div>
+              </div>
+              <div class="p-5 flex flex-col gap-4 flex-1">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-2 text-text-muted text-sm">
+                    <span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+                    <span>Intermediate</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-text-muted text-sm">
+                    <span class="material-symbols-outlined text-[18px]">schedule</span>
+                    <span>5 Months</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-4 border-t border-border-light flex gap-3">
+                  <button
+                    class="flex-1 h-9 rounded-lg bg-background-alt text-text-body hover:bg-primary hover:text-white text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">download</span>
+                    Syllabus
+                  </button>
+                  <button
+                    class="h-9 w-9 rounded-lg border border-border-light flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col rounded-xl bg-white overflow-hidden shadow-sm border border-border-light hover:border-[rgba(26,166,166,0.35)] hover:shadow-md transition-all duration-300 group">
+              <div class="h-48 w-full bg-cover bg-center relative" data-alt="Cybersecurity digital lock concept graphic"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdA85uZrie8PLVq5fVFFBluosZpbUQLVp7F9-0bcg9hoSsmNOkCmhEzxFWYOWRLxoXNx0FWdEFzVwhqAacLHW5zV1cSo0jF1lebRCI6lSM_qZzJyv-0l8MKTrny7nw1goTB7sq94tZdoqBfAexlOtXwiIxIz3nkaPYaFLFAHg0O9glRENHYeGfCgtW19EhE5vTWcB1E_2M5JeD56KrnhQpBeNipWMaHoVAbJEj5TBh9VG7Z_kJx5oIPD7tgDIlP_1H-FncoWt9QR6C');">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <h3 class="text-white text-xl font-bold">Cybersecurity</h3>
+                </div>
+              </div>
+              <div class="p-5 flex flex-col gap-4 flex-1">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-2 text-text-muted text-sm">
+                    <span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+                    <span>Advanced</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-text-muted text-sm">
+                    <span class="material-symbols-outlined text-[18px]">schedule</span>
+                    <span>8 Months</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-4 border-t border-border-light flex gap-3">
+                  <button
+                    class="flex-1 h-9 rounded-lg bg-background-alt text-text-body hover:bg-primary hover:text-white text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">download</span>
+                    Syllabus
+                  </button>
+                  <button
+                    class="h-9 w-9 rounded-lg border border-border-light flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-background-alt p-6 md:p-8 rounded-2xl border border-border-light">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-accent text-3xl">translate</span>
+              <h2 class="text-text-heading text-2xl font-bold leading-tight">English Programs</h2>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-white border border-border-light hover:border-[rgba(26,166,166,0.35)] shadow-sm transition-all cursor-pointer">
+                <div class="h-12 w-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">school</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-text-heading font-bold">General English</h4>
+                  <p class="text-sm text-text-muted">Foundational skills for communication</p>
+                </div>
+                <button class="text-accent hover:text-primary font-bold text-sm">Details</button>
+              </div>
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-white border border-border-light hover:border-[rgba(26,166,166,0.35)] shadow-sm transition-all cursor-pointer">
+                <div class="h-12 w-12 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">language_gb_english</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-text-heading font-bold">IELTS Preparation</h4>
+                  <p class="text-sm text-text-muted">Intensive course for high band scores</p>
+                </div>
+                <button class="text-accent hover:text-primary font-bold text-sm">Details</button>
+              </div>
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-white border border-border-light hover:border-[rgba(26,166,166,0.35)] shadow-sm transition-all cursor-pointer">
+                <div
+                  class="h-12 w-12 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-text-heading font-bold">CEFR Certification</h4>
+                  <p class="text-sm text-text-muted">Standardized European levels B1-C1</p>
+                </div>
+                <button class="text-accent hover:text-primary font-bold text-sm">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-accent text-3xl">auto_stories</span>
+              <h2 class="text-text-heading text-2xl font-bold leading-tight">German Academy</h2>
+            </div>
+            <div
+              class="rounded-xl bg-primary border border-primary overflow-hidden flex flex-col h-full relative group shadow-md">
+              <div
+                class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                data-alt="Brandenburg Gate in Berlin abstract view"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoCBbYJHo31tQ18hbUOYuF1px4iGFNGpGKpbXVBmUncAvBgwowcYNEEwlqRFRvgd1qi-uwZon9LSE9P9I1mh8s1ZCfXVhGzhS0h2p68mdcI1FQ70XaIIL8-bLC5cuG_Ykv_NEpvLlLnGvtJiC5R0UpFNmIlqSIRQO4nZkn5Swvk4LG6gR3v65eguIOEc0KprpZqj0EH9US6-V_yKvFgZ0_AaKwCyBsk1v2eUodqxNPrHI6KQsxKoTKtdTtVpBk0Gkox85oIFtiIm_c');">
+              </div>
+              <div class="relative z-10 p-6 flex flex-col h-full">
+                <div class="flex gap-2 mb-4">
+                  <span
+                    class="px-2 py-1 bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 rounded text-xs font-bold">A1</span>
+                  <span
+                    class="px-2 py-1 bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 rounded text-xs font-bold">A2</span>
+                  <span
+                    class="px-2 py-1 bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 rounded text-xs font-bold">B1</span>
+                  <span
+                    class="px-2 py-1 bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 rounded text-xs font-bold">B2</span>
+                </div>
+                <h3 class="text-2xl font-black text-white mb-2">Master German</h3>
+                <p class="text-slate-300 text-sm mb-6">From beginner to professional fluency. Our structured curriculum
+                  ensures you pass Goethe-Zertifikat exams.</p>
+                <ul class="space-y-3 mb-8">
+                  <li class="flex items-center gap-2 text-white text-sm">
+                    <span class="material-symbols-outlined text-accent text-base">check_circle</span>
+                    Native speaking instructors
+                  </li>
+                  <li class="flex items-center gap-2 text-white text-sm">
+                    <span class="material-symbols-outlined text-accent text-base">check_circle</span>
+                    Cultural immersion activities
+                  </li>
+                  <li class="flex items-center gap-2 text-white text-sm">
+                    <span class="material-symbols-outlined text-accent text-base">check_circle</span>
+                    Study abroad consultation
+                  </li>
+                </ul>
+                <button
+                  class="mt-auto w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-background-alt transition-colors shadow-sm">
+                  Start German Journey
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div
+            class="lg:col-span-1 rounded-2xl bg-white border border-border-light shadow-sm hover:border-[rgba(26,166,166,0.35)] transition-colors h-full flex flex-col relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+            <div class="p-6 h-full flex flex-col relative z-10">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 bg-accent/10 rounded-lg text-accent">
+                  <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-heading">Mental Arithmetic</h3>
+              </div>
+              <p class="text-text-body text-sm mb-6 leading-relaxed">
+                Boost cognitive abilities, memory, and concentration for children ages 5-14 through abacus-based
+                learning.
+              </p>
+              <div class="grid grid-cols-2 gap-3 mb-6">
+                <div class="bg-background-alt p-3 rounded-lg text-center border border-border-light">
+                  <span class="block text-accent font-bold text-lg">2x</span>
+                  <span class="text-xs text-text-muted">Focus Speed</span>
+                </div>
+                <div class="bg-background-alt p-3 rounded-lg text-center border border-border-light">
+                  <span class="block text-accent font-bold text-lg">100%</span>
+                  <span class="text-xs text-text-muted">Engagement</span>
+                </div>
+              </div>
+              <button
+                class="mt-auto flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary text-white hover:bg-primary-hover transition-all text-sm font-bold shadow-sm">
+                Enroll Child
+              </button>
+            </div>
+          </div>
+          <div
+            class="lg:col-span-2 overflow-hidden rounded-xl border border-border-light bg-white shadow-sm h-full flex flex-col">
+            <div class="p-6 border-b border-border-light bg-background-alt">
+              <h3 class="text-lg font-bold text-text-heading">Program Outcome Comparison</h3>
+              <p class="text-sm text-text-muted">What you will achieve by the end of our top courses</p>
+            </div>
+            <div class="overflow-x-auto flex-1">
+              <table class="w-full text-left text-sm text-text-body h-full">
+                <thead class="text-xs uppercase bg-background-alt text-text-muted border-b border-border-light">
+                  <tr>
+                    <th class="px-6 py-4 font-bold tracking-wider" scope="col">Metric</th>
+                    <th class="px-6 py-4 font-bold tracking-wider" scope="col">IT Programs</th>
+                    <th class="px-6 py-4 font-bold tracking-wider" scope="col">Language Courses</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-border-light bg-white">
+                  <tr class="hover:bg-background-alt/50 transition-colors">
+                    <td class="px-6 py-5 font-medium text-text-heading">Certification</td>
+                    <td class="px-6 py-5">Industry Recognized</td>
+                    <td class="px-6 py-5">CEFR / IELTS</td>
+                  </tr>
+                  <tr class="hover:bg-background-alt/50 transition-colors">
+                    <td class="px-6 py-5 font-medium text-text-heading">Career Support</td>
+                    <td class="px-6 py-5 text-accent font-bold">Internship + Placement</td>
+                    <td class="px-6 py-5">Study Abroad Consulting</td>
+                  </tr>
+                  <tr class="hover:bg-background-alt/50 transition-colors">
+                    <td class="px-6 py-5 font-medium text-text-heading">Avg. Salary Boost</td>
+                    <td class="px-6 py-5">High Potential</td>
+                    <td class="px-6 py-5">Global Opportunities</td>
+                  </tr>
+                  <tr class="hover:bg-background-alt/50 transition-colors">
+                    <td class="px-6 py-5 font-medium text-text-heading">Duration</td>
+                    <td class="px-6 py-5">5-8 Months</td>
+                    <td class="px-6 py-5">3-6 Months per level</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section class="w-full mt-8">
+          <div
+            class="bg-background-alt rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center justify-between border border-border-light shadow-sm">
+            <div class="flex-1 space-y-4">
+              <span
+                class="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-wide">Not
+                sure where to start?</span>
+              <h2 class="text-3xl md:text-4xl font-black text-text-heading leading-tight">Take a Free Placement Test
+              </h2>
+              <p class="text-text-body text-lg max-w-md">Assess your current skill level in English, German, or Logic to
+                find the perfect course for you.</p>
+              <div class="flex flex-wrap gap-4 pt-2">
+                <div
+                  class="flex items-center gap-2 text-text-heading font-medium text-sm bg-white border border-border-light shadow-sm px-3 py-1.5 rounded-lg">
+                  <span class="material-symbols-outlined text-accent text-sm">timer</span>
+                  15 Minutes
+                </div>
+                <div
+                  class="flex items-center gap-2 text-text-heading font-medium text-sm bg-white border border-border-light shadow-sm px-3 py-1.5 rounded-lg">
+                  <span class="material-symbols-outlined text-accent text-sm">psychology</span>
+                  Instant Results
+                </div>
+              </div>
+            </div>
+            <form
+              class="w-full max-w-md bg-white p-6 rounded-xl border border-border-light shadow-md flex flex-col gap-4">
+              <h3 class="text-text-heading font-bold text-lg mb-2">Get Your Test Link</h3>
+              <div>
+                <label class="sr-only" for="name">Full Name</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-text-muted">person</span>
+                  </div>
+                  <input
+                    class="block w-full pl-10 pr-3 py-3 border border-border-light rounded-lg leading-5 bg-background-main text-text-body placeholder-text-muted focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent sm:text-sm shadow-sm"
+                    id="name" placeholder="Your Full Name" type="text" />
+                </div>
+              </div>
+              <div>
+                <label class="sr-only" for="email">Email Address</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-text-muted">email</span>
+                  </div>
+                  <input
+                    class="block w-full pl-10 pr-3 py-3 border border-border-light rounded-lg leading-5 bg-background-main text-text-body placeholder-text-muted focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent sm:text-sm shadow-sm"
+                    id="email" placeholder="you@example.com" type="email" />
+                </div>
+              </div>
+              <div>
+                <label class="sr-only" for="course-interest">Interested In</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-text-muted">category</span>
+                  </div>
+                  <select
+                    class="block w-full pl-10 pr-3 py-3 border border-border-light rounded-lg leading-5 bg-background-main text-text-body focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent sm:text-sm appearance-none shadow-sm"
+                    id="course-interest">
+                    <option>English Language</option>
+                    <option>German Language</option>
+                    <option>IT Fundamentals</option>
+                    <option>Mental Arithmetic (Child)</option>
+                  </select>
+                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-text-muted">expand_more</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="mt-2 w-full flex items-center justify-center py-3 px-4 border border-transparent rounded-lg text-sm font-bold text-white bg-primary hover:bg-primary-hover transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-white"
+                type="button">
+                Send Me The Test
+              </button>
+              <p class="text-xs text-text-muted text-center mt-2">No credit card required.</p>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="border-t border-border-light bg-background-alt pt-12 pb-8 px-10 mt-auto">
+    <div class="layout-content-container max-w-[1200px] mx-auto flex flex-col gap-8">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <div class="flex flex-col gap-4 max-w-xs">
+          <div class="flex items-center gap-2 text-text-heading">
+            <div class="size-6 text-primary">
+              <svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+            <h2 class="text-text-heading text-lg font-bold">YuksalishLC</h2>
+          </div>
+          <p class="text-text-body text-sm">Empowering the next generation with cutting-edge IT skills and global
+            languages.</p>
+        </div>
+        <div class="flex gap-12 flex-wrap">
+          <div class="flex flex-col gap-3">
+            <h4 class="text-text-heading font-bold text-sm">Programs</h4>
+            <a class="text-text-muted hover:text-accent text-sm transition-colors" href="#">IT Courses</a>
+            <a class="text-text-muted hover:text-accent text-sm transition-colors" href="#">English</a>
+            <a class="text-text-muted hover:text-accent text-sm transition-colors" href="#">German</a>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h4 class="text-text-heading font-bold text-sm">Company</h4>
+            <a class="text-text-muted hover:text-accent text-sm transition-colors" href="#">About Us</a>
+            <a class="text-text-muted hover:text-accent text-sm transition-colors" href="#">Careers</a>
+            <a class="text-text-muted hover:text-accent text-sm transition-colors" href="#">Contact</a>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h4 class="text-text-heading font-bold text-sm">Social</h4>
+            <div class="flex gap-4">
+              <a class="text-text-muted hover:text-accent transition-colors" href="#">
+                <span class="sr-only">Facebook</span>
+                <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path clip-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </a>
+              <a class="text-text-muted hover:text-accent transition-colors" href="#">
+                <span class="sr-only">Instagram</span>
+                <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path clip-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 9.995 2 12.315 2zm-3.155 16.541c.967.044 1.347.048 4.032.048 2.69 0 3.07-.004 4.041-.048 1.063-.048 1.801-.25 2.228-.417.564-.219 1.034-.51 1.488-.964.453-.454.745-.924.963-1.488.167-.427.37-1.165.418-2.228.044-.97.048-1.35.048-4.041 0-2.685-.004-3.065-.048-4.032-.048-1.063-.25-1.801-.417-2.228-.219-.564-.51-1.034-.964-1.488-.454-.453-.924-.745-1.488-.963-.427-.167-1.165-.37-2.228-.418-.97-.044-1.35-.048-4.041-.048-2.685 0-3.065.004-4.032.048-1.063.048-1.801.25-2.228.417-.564.219-1.034.51-1.488.964-.454.453-.745.924-.963 1.488-.167.427-.37 1.165-.418 2.228-.044.97-.048 1.35-.048 4.041 0 2.69.004 3.07.048 4.041.048 1.063.25 1.801.417 2.228.219.564.51 1.034.964 1.488.453.454.924.745 1.488.963.427.167 1.165.37 2.228.418zM12.315 6.643a5.67 5.67 0 110 11.34 5.67 5.67 0 010-11.34zm0 1.934a3.737 3.737 0 100 7.474 3.737 3.737 0 000-7.474z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center border-t border-border-light pt-8 gap-4">
+        <p class="text-text-muted text-xs">© 2024 YuksalishLC. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a class="text-text-muted hover:text-accent text-xs transition-colors" href="#">Privacy Policy</a>
+          <a class="text-text-muted hover:text-accent text-xs transition-colors" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

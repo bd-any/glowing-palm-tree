@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Contact &amp; Enrollment - YuksalishLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0A2837",
+            "secondary": "#22323B",
+            "accent": "#1aa6a6",
+            "background-light": "#FFFFFF",
+            "background-alt": "#F5F7FA",
+            "text-heading": "#0A2837",
+            "text-body": "#22323B",
+            "border-light": "#E2E8F0",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .card-hover:hover {
+            border-color: rgba(26,166,166,0.35);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-text-body font-display antialiased selection:bg-primary selection:text-white">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <header
+      class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 bg-white/95 backdrop-blur-sm px-10 py-4">
+      <div class="flex items-center gap-4 text-primary">
+        <div class="size-8 text-primary">
+          <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+              fill="currentColor"></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">YuksalishLC</h2>
+      </div>
+      <div class="hidden md:flex flex-1 justify-end gap-8">
+        <nav class="flex items-center gap-9">
+          <a class="text-secondary hover:text-primary font-medium text-sm leading-normal transition-colors"
+            href="#">Courses</a>
+          <a class="text-secondary hover:text-primary font-medium text-sm leading-normal transition-colors"
+            href="#">Teachers</a>
+          <a class="text-secondary hover:text-primary font-medium text-sm leading-normal transition-colors"
+            href="#">About Us</a>
+          <a class="text-primary font-bold text-sm leading-normal transition-colors" href="#">Contact</a>
+        </nav>
+        <button
+          class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary/90 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-all shadow-sm">
+          <span class="truncate">Enroll Now</span>
+        </button>
+      </div>
+      <button class="md:hidden text-primary">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
+    <main class="flex-1 bg-background-light">
+      <div class="layout-container flex flex-col items-center">
+        <div class="layout-content-container flex flex-col max-w-[1200px] w-full px-4 md:px-10 py-12 gap-12">
+          <section class="flex flex-col gap-4 text-center md:text-left">
+            <h1 class="text-text-heading text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Contact
+              &amp; Enrollment</h1>
+            <p class="text-slate-500 text-lg font-normal leading-relaxed max-w-2xl">Start your journey in IT and
+              Languages with us today. Reach out for questions or fill the form below to secure your spot.</p>
+            <div class="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
+              <button
+                class="flex items-center gap-2 px-6 py-3 bg-white border border-border-light rounded-lg hover:border-primary transition-colors group shadow-sm text-text-heading">
+                <span
+                  class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">call</span>
+                <span class="font-medium">Call Now</span>
+              </button>
+              <button
+                class="flex items-center gap-2 px-6 py-3 bg-[#2AABEE]/5 border border-[#2AABEE]/20 rounded-lg hover:bg-[#2AABEE]/10 transition-colors shadow-sm">
+                <span class="material-symbols-outlined text-[#2AABEE]">send</span>
+                <span class="text-[#2AABEE] font-medium">Message on Telegram</span>
+              </button>
+            </div>
+          </section>
+          <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div
+              class="flex flex-col gap-4 p-6 rounded-xl border border-slate-100 bg-white shadow-sm card-hover transition-colors group">
+              <div
+                class="size-12 rounded-full bg-background-alt flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">phone</span>
+              </div>
+              <div>
+                <h3 class="text-text-heading text-lg font-bold">Phone</h3>
+                <p class="text-slate-500 text-sm mt-1">+998 90 123 45 67</p>
+                <p class="text-slate-500 text-sm">+998 71 200 00 00</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 p-6 rounded-xl border border-slate-100 bg-white shadow-sm card-hover transition-colors group">
+              <div
+                class="size-12 rounded-full bg-background-alt flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">send</span>
+              </div>
+              <div>
+                <h3 class="text-text-heading text-lg font-bold">Telegram</h3>
+                <p class="text-slate-500 text-sm mt-1">@yuksalish_admin</p>
+                <p class="text-slate-500 text-sm">Channel: @yuksalish_lc</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 p-6 rounded-xl border border-slate-100 bg-white shadow-sm card-hover transition-colors group">
+              <div
+                class="size-12 rounded-full bg-background-alt flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <h3 class="text-text-heading text-lg font-bold">Email</h3>
+                <p class="text-slate-500 text-sm mt-1">info@yuksalish.uz</p>
+                <p class="text-slate-500 text-sm">support@yuksalish.uz</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 p-6 rounded-xl border border-slate-100 bg-white shadow-sm card-hover transition-colors group">
+              <div
+                class="size-12 rounded-full bg-background-alt flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <h3 class="text-text-heading text-lg font-bold">Address</h3>
+                <p class="text-slate-500 text-sm mt-1">Amir Temur Str. 15</p>
+                <p class="text-slate-500 text-sm">Tashkent, Uzbekistan</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 p-6 rounded-xl border border-slate-100 bg-white shadow-sm card-hover transition-colors group">
+              <div
+                class="size-12 rounded-full bg-background-alt flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">schedule</span>
+              </div>
+              <div>
+                <h3 class="text-text-heading text-lg font-bold">Hours</h3>
+                <p class="text-slate-500 text-sm mt-1">Mon-Sat: 09:00 - 20:00</p>
+                <p class="text-slate-500 text-sm">Sunday: Closed</p>
+              </div>
+            </div>
+          </section>
+          <div class="grid lg:grid-cols-12 gap-8 mt-4">
+            <div class="lg:col-span-7 flex flex-col gap-6">
+              <div class="bg-background-alt border border-slate-200 rounded-xl p-6 md:p-8">
+                <div class="mb-8">
+                  <h2 class="text-2xl font-bold text-text-heading mb-2">Student Registration</h2>
+                  <p class="text-slate-500">Fill out the form below and we will contact you shortly to confirm your
+                    registration.</p>
+                </div>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-text-heading mb-2">Full Name</label>
+                    <input
+                      class="w-full h-12 px-4 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400"
+                      placeholder="John Doe" type="text" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-text-heading mb-2">Phone Number</label>
+                    <input
+                      class="w-full h-12 px-4 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400"
+                      placeholder="+998 90 000 00 00" type="tel" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-text-heading mb-2">Email (Optional)</label>
+                    <input
+                      class="w-full h-12 px-4 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400"
+                      placeholder="john@example.com" type="email" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-text-heading mb-2">Interested Course</label>
+                    <div class="relative">
+                      <select
+                        class="w-full h-12 px-4 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer">
+                        <option disabled="" selected="" value="">Select a course</option>
+                        <option value="english">General English</option>
+                        <option value="ielts">IELTS Preparation</option>
+                        <option value="frontend">Frontend Development</option>
+                        <option value="backend">Backend Development</option>
+                        <option value="python">Python for Beginners</option>
+                      </select>
+                      <span
+                        class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-text-heading mb-2">Preferred Time</label>
+                    <div class="relative">
+                      <select
+                        class="w-full h-12 px-4 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer">
+                        <option disabled="" selected="" value="">Select timing</option>
+                        <option value="morning">Morning (09:00 - 12:00)</option>
+                        <option value="afternoon">Afternoon (14:00 - 18:00)</option>
+                        <option value="evening">Evening (18:30 - 20:30)</option>
+                      </select>
+                      <span
+                        class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">schedule</span>
+                    </div>
+                  </div>
+                  <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-text-heading mb-2">Comments / Questions</label>
+                    <textarea
+                      class="w-full p-4 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-slate-400"
+                      placeholder="Any specific requirements?" rows="3"></textarea>
+                  </div>
+                  <div class="md:col-span-2 mt-2">
+                    <button
+                      class="w-full h-14 bg-[#1e8a4a] hover:bg-[#166c3a] text-white font-bold text-lg rounded-lg shadow-lg shadow-green-900/10 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                      type="button">
+                      <span>Submit Application</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <p class="text-center text-xs text-slate-400 mt-4">By submitting this form, you agree to our terms
+                      of service and privacy policy.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="lg:col-span-5 flex flex-col gap-6">
+              <h2 class="text-2xl font-bold text-text-heading">Enrollment FAQ</h2>
+              <div class="flex flex-col gap-4">
+                <details
+                  class="group bg-white border border-slate-200 rounded-xl p-4 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:border-primary/40 open:border-primary/40 shadow-sm">
+                  <summary class="flex items-center justify-between gap-2">
+                    <h3 class="font-bold text-text-heading">How do I pay for the courses?</h3>
+                    <span
+                      class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+                  </summary>
+                  <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    We accept payments via Click, Payme, bank transfer, and cash. You can pay monthly or for the full
+                    course duration with a discount.
+                  </div>
+                </details>
+                <details
+                  class="group bg-white border border-slate-200 rounded-xl p-4 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:border-primary/40 open:border-primary/40 shadow-sm">
+                  <summary class="flex items-center justify-between gap-2">
+                    <h3 class="font-bold text-text-heading">Is there a refund policy?</h3>
+                    <span
+                      class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+                  </summary>
+                  <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Yes, if you decide to stop within the first 3 lessons, we offer a full refund. After that, refunds
+                    are calculated based on remaining lessons.
+                  </div>
+                </details>
+                <details
+                  class="group bg-white border border-slate-200 rounded-xl p-4 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:border-primary/40 open:border-primary/40 shadow-sm">
+                  <summary class="flex items-center justify-between gap-2">
+                    <h3 class="font-bold text-text-heading">Can I take a trial lesson?</h3>
+                    <span
+                      class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+                  </summary>
+                  <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Absolutely! The first lesson of any course is free. It's a great way to meet the teacher and see if
+                    the course is right for you.
+                  </div>
+                </details>
+                <details
+                  class="group bg-white border border-slate-200 rounded-xl p-4 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:border-primary/40 open:border-primary/40 shadow-sm">
+                  <summary class="flex items-center justify-between gap-2">
+                    <h3 class="font-bold text-text-heading">Do you provide certificates?</h3>
+                    <span
+                      class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+                  </summary>
+                  <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Upon successful completion of the course and final exam, you will receive an official certificate
+                    from YuksalishLC.
+                  </div>
+                </details>
+              </div>
+              <div
+                class="mt-auto bg-primary text-white rounded-xl p-6 relative overflow-hidden shadow-lg shadow-primary/20">
+                <div class="relative z-10">
+                  <h3 class="text-lg font-bold mb-2">Still have questions?</h3>
+                  <p class="text-sm text-slate-200 mb-4">Our support team is available 24/7 on Telegram.</p>
+                  <a class="inline-flex items-center text-sm font-bold text-white/90 hover:text-white transition-colors"
+                    href="#">
+                    Contact Support <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
+                  </a>
+                </div>
+                <div class="absolute -bottom-4 -right-4 text-white/10 rotate-12">
+                  <span class="material-symbols-outlined text-[120px]">support_agent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full h-[400px] bg-slate-100 border border-slate-200 rounded-xl overflow-hidden relative group shadow-sm">
+            <div class="absolute inset-0 bg-slate-50"
+              data-alt="Map showing location of YuksalishLC in Tashkent with street view overlay"
+              data-location="Tashkent"
+              style="background-image: radial-gradient(circle at 20% 50%, #E2E8F0 0%, transparent 20%), radial-gradient(circle at 80% 30%, #E2E8F0 0%, transparent 20%);">
+              <div class="absolute inset-0 opacity-10"
+                style="background-image: linear-gradient(#CBD5E1 1px, transparent 1px), linear-gradient(90deg, #CBD5E1 1px, transparent 1px); background-size: 40px 40px;">
+              </div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <div class="relative">
+                  <div
+                    class="size-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 animate-bounce text-white">
+                    <span class="material-symbols-outlined text-3xl">location_on</span>
+                  </div>
+                  <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-1.5 bg-black/20 blur-sm rounded-full">
+                  </div>
+                </div>
+                <div class="mt-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg border border-slate-200 shadow-xl">
+                  <p class="text-text-heading font-bold text-sm">YuksalishLC Main Campus</p>
+                  <p class="text-xs text-slate-500">Amir Temur Str. 15</p>
+                </div>
+              </div>
+              <div class="absolute bottom-4 right-4 flex flex-col gap-2">
+                <button
+                  class="size-10 bg-white text-slate-700 rounded shadow-lg flex items-center justify-center hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined">add</span>
+                </button>
+                <button
+                  class="size-10 bg-white text-slate-700 rounded shadow-lg flex items-center justify-center hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined">remove</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white border-t border-slate-200 py-12 px-10">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3 text-slate-500">
+          <span class="text-sm">© 2024 Yuksalish Learning Center. All rights reserved.</span>
+        </div>
+        <div class="flex gap-6">
+          <a class="text-slate-500 hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
+          <a class="text-slate-500 hover:text-primary transition-colors text-sm" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
